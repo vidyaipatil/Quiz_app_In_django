@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height:150vh;
+            width:90%;
+            border :4px solid black;
+            margin-left:5%;
+            color:green;
+            background-color: rgb(229, 235, 242);
+           
+
+        }
+        .sol{
+            margin: 20px;
+            height: auto;
+            width: 60%;
+            color: black;
+            border: 2px solid red;
+            margin-left: 20%;
+            font-size:20px;
+            background-color:white;
+            color:green;
+            padding:20px;
+        }
+        h1,h2{
+            text-align:center;
+        }
+
+
+    </style>
+</head>
+<body >
+    <div class="main" > <h1 style="text-align:center">Result</h1>
+    <h2>Total Question Attemplted : {{count}}</h2>
+    <h2>Correct Answer: {{score}}</h2>
+    <h2 style="color: red;">Wrong Answer: {{wrong}}</h2>
+    <h2>Your Score is : {{score}}</h2>
+    <h2>Solution of wrong answer is : </h2>
+    {% for n in li %}
+    <div class="sol" style="text-align:none;">
+        <div>Q.{{n.id}} {{n.question}}</div>
+        
+        <div>Solution  : {{n.solution}}</div>
+          
+          
+    </div>
+    {% endfor%}
+
+
+
+    </div>
+
+   
+
+    
+</body>
+</html>
