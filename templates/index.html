@@ -4,284 +4,208 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Kay+Pho+Du&display=swap" rel="stylesheet">
-
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>Aptitude Question</title>
     <style>
-        body{
+        body {
             background-color: rgb(238, 241, 244);
+            font-family: 'Kay Pho Du', serif;
         }
-        #main{
-            {% comment %} height: auto; {% endcomment %}
-            width: 97%;
-            /* border: 4px solid rgb(4, 4, 4); */
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            
 
-        }
-        
-        .ele{
-            background-color: rgb(188, 193, 198);
-        
-            /* display: flex;
-            flex-direction: column; */
-            {% comment %} height :310vh; {% endcomment %}
-            width: 100%;
-            /* border: 2px solid rgb(3, 3, 3); */
-            /* background-color: aliceblue; */
-        }
-        /* .contain{
-            border: 2px solid red;
-        } */
-        #nav1{
+        .headline {
             display: flex;
-            height: 12vh;
-            background-color: blue;
-            gap: 3vw;
-
-        }
-        .equal{
-            margin: 1.5vw;
-            margin-left: 2.5vw;
-            display: flex;
-            height: 100%;
-            width: 6vh;
-            gap: 0.6vw;
-            flex-direction: column;
-        }
-        .dash{
-            width:100%;
-            border: 5px solid white;
-        }
-        #nav2{
-            display: flex;
-            flex-direction: column;
-            height: 80%;
-            width:20vw;
-            margin: 2vh;
-            /* border: 2px soild red; */
-        }
-        .title{
-            /* border: 4px solid black; */
-            height:7vh;
-            width: 30vw;
-
-        }
-        #title{
-            display: flex;
-
-        }
-        .inside1{
-            /* border: 1px solid black; */
-            width: 9vw;
-            height: 100%;
-            align-self: center;
-            color: aliceblue;
-            font-size: 3.5vh;
-            font-weight: 800;
-            margin-left: 5vh;
-
-        }
-        .inside2{
-            margin-top: 6px;
+            align-items: center;
             font-size: 20px;
-            color: aliceblue;
-            font-weight:700
+            font-weight: 700;
+            padding-top: 1vh;
+            background-color: aliceblue;
         }
-        .option{
-            margin-left: 15vw;
-            height: 100%;
-            width:45vw;
-            /* border: 4px solid black; */
+
+        .num {
+            height: 3rem;
+            width: 3rem;
+            border-radius: 50%;
             display: flex;
-            gap: 1vw;
-
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin: 0 1rem;
+            background-color: blue;
+            font-size: 1.5rem;
+            font-weight: 700;
         }
-        .list{
-            height: 100%;
-            width: 10vw;
 
+        .que {
+            font-size: 1.25rem;
+            font-weight: 700;
+            padding: 1rem;
+            background-color: aliceblue;
+            margin-bottom: 20px;
+        }
 
-            /* border: 1px solid red; */
+        .middle {
+            padding: 1rem;
+            background-color: aliceblue;
+            font-size: 1rem;
+            flex-direction: column;
+            gap: 12px;
         }
-        img{
-            height: 12vh;
-            width: 8vw;
+
+        .op {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background-color: aliceblue;
+            padding: 10px;
+            border: 2px solid #ddd;
+            margin-bottom: 10px;
+            transition: border-color 0.2s;
         }
-        button{
+
+        .op:hover {
+            border-color: rgb(90, 194, 90);
+        }
+
+        .op input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .check {
+            height: 3rem;
+            width: 100%;
+            font-size: 1.5rem;
             background-color: blue;
             color: aliceblue;
-            font-size: 5vh;
             border: none;
+            transition: background-color 0.3s;
         }
-    .headline{
-        display: flex;
-        font-size: 20px;
-        font-weight: 700;
-        /* margin-top: 5vh; */
-        padding-top: 1vh;
-        font-family: 'Kay Pho Du', serif;
-        font-style: italic;
-        background-color: aliceblue;
-      
-    }
-    .num{
-        height: 5vh;
-        width: 5vh;
-        border-radius: 20px;
-        color: white;
-        margin-left: 10px;
-        margin-right: 10px;
-        background-color: blue;
-    }
-    .checkbox{
-        height: 5vh;
-        width: 5vh;
-        /* border-radius: 20px;
-        color: white;
-        
-        border: 2px solid blue;
-        */
-    } 
-    .que{
-        font-size: 20px;
-        font-weight: 700;
-        padding-left: 5vh;
-        font-family: 'Kay Pho Du', serif;
-        font-style: italic;
-        background-color: aliceblue;
-        margin-bottom: 20px;
 
-    }
-    
-    .middle{
-        padding: 30px;
-        /* margin-left: 54px; */
-        display: flex;
-        background-color: aliceblue;
-        font-size: 10px;
-        flex-direction: column;
-        width: 100%;
-        height: 30vh;
-        /* border: 3px solid red; */
-        gap: 12px;
-        /* background-color: rgb(211, 214, 216); ; */
-
-    }
-    .op{
-        display: flex;
-        gap: 20px;
-        background-color: aliceblue;
-        color: black;
-        height:7vh;
-        /* border: 2px solid black; */
-    }
-    .check{
-        height: 8vh;
-        width: 20vw;
-        font-size: 4vh;
-        margin-left: 40vw;
-        background-color:blue; color: aliceblue;
-   }
-   .check:hover{
+        .check:hover {
             background-color: rgb(90, 194, 90);
         }
-        .op:focus{
-            border: 2px solid rgb(90, 194, 90);
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            font-family: 'Kay Pho Du', serif;
+        }
+
+        @media (max-width: 768px) {
+            .headline, .que, .op {
+                font-size: 1rem;
+            }
+            .num {
+                font-size: 1rem;
+                height: 2rem;
+                width: 2rem;
+            }
+            .check {
+                font-size: 1rem;
+                height: 2.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .num {
+                font-size: 0.75rem;
+                height: 1.5rem;
+                width: 1.5rem;
+            }
+            .headline, .que, .op {
+                font-size: 0.85rem;
+            }
+            .check {
+                font-size: 0.85rem;
+                height: 2rem;
+            }
+        }
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            transform: scale(1.5); /* Increase size by 1.5 times */
         }
     </style>
 </head>
 <body>
-    <nav>
-        <div id="nav1">
-           <div class="equal">
-             <div class="dash"></div>
-             <div class="dash"></div>
-             <div class="dash"></div>
-           </div>
-           <div  id="nav2">
-            <div class="title" id="title">
-                <div class="inside1">EXAMSIDE</div>
-                <div class="inside2">(powered by ExamGoal)</div>
-            </div>
-            <div class="title" style=" font-size: 20px;
-            color: aliceblue;
-            font-weight:700;margin-left: 35px;">Question</div>
-             
-           </div>
-           <div class="option">
-            <button class="list">Home</button><button class="list">Profile</button><button class="list">Log Out</button>
-            <img src="/static/book.jpg">
-            </div>
-
+    <nav class="navbar navbar-expand-lg bg-primary">
+        <div class="container-fluid">
         
-           
+          {% comment %} <a class="navbar-brand" href="#">Navbar</a> {% endcomment %}
+          <div class="collapse navbar-collapse d-flex justify-content-evenly row" id="navbarTogglerDemo03">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 row d-flex justify-content-evenly row">
+                <li class="nav-item col ">
+                    {% comment %} <a class="nav-link" href="#">Link</a>
+                    
+                     {% endcomment %}
+                     <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="white" class="bi bi-list text-color" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                      </svg>
+                  </li>
+                  <li class="nav-item col-lg-5">
+                    <div class="row ">
+                        <div class="col-sm-auto text-white  " style="font-size: 35px; font-weight:500;">EXAMSIDE
+                        </div>
+                        <div class="col text-white mt-4" style="font-weight:500;" >(Powered by ExamGoal)</div>
+                    </div>
+                    <div  class="row text-white  ms-1" style="font-size:23px;font-weight:500;" >Question</div>
+                  </li>
+              <li class="nav-item col ">
+                <a class="nav-link active text-white" aria-current="page" style="font-size: 30px; font-weight:500;" href="#">Home</a>
+              </li>
+              <li class="nav-item col ">
+                <a class="nav-link text-white" href="#" style="font-size: 30px; font-weight:500;">Profile</a>
+              </li>
+              <li class="nav-item col ">
+                <a class="nav-link text-white" style="font-size: 30px; font-weight:500;">Log-Out</a>
+              </li>
+              <img class="img-fluid col " style="height:90px;width:120px;" src="/static/book.jpg">
+            </ul>
+
+            {% comment %} <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form> {% endcomment %}
+          </div>
         </div>
-    </nav>
-    <h1 style="text-align: center;font-family: 'Kay Pho Du', serif;
-    font-style: italic;">Apptitude question</h1>
-     <div id="main">
-    <form action="{% url 'ans'%}" method="POST">
-        {% csrf_token %}
-           {% for n in servicedata %}
-    
-            <div class="ele">
-            <div class="contain headline"  style="font-weight: 900;">
-               <button class="num">{{n.id}}</button> GATE CSE APTITUDE
-            </div>
-            <div class="contain que" >{{n.question}}</div>
-            <div class=" middle">
-                {% comment %} <ol>
-                    <li><input type="radio" name="{{n.id}}" value="6.85" id="1{{n.answer}}">48/7</li>
-                    <li><input type="radio" name="{{n.id}}" value="10" id="2{{n.answer}}"> 10</li>
-                    <li><input type="radio" name="{{n.id}}" value="100" id="3{{n.answer}}"> 100</li>
-                    <li><input type="radio" name="{{n.id}}" value="400" id="4{{n.answer}}"> 400</li>
-                </ol>
-            {% endcomment %}
-            <button class="op">
-                <input type="radio" class="checkbox" name="{{n.id}}" value="{{n.op1}}">
-                 <div class="num">A</div><div style=" font-size: 25px;
-                 font-weight: 700;
-                 font-family: 'Kay Pho Du', serif;
-                 font-style: italic;">{{n.op1}}</div> 
-                 
-             </button><button class="op">
-                <input type="radio" class="checkbox" name="{{n.id}}" value="{{n.op2}}">
-                 <div class="num">B</div> <div style=" font-size: 25px;
-                 font-weight: 700;
-                 font-family: 'Kay Pho Du', serif;
-                 font-style: italic;">{{n.op2}}</div>  
-
-             </button><button class="op">
-                <input type="radio" class="checkbox" name="{{n.id}}" value="{{n.op3}}">
-                 <div class="num">C</div>  <div style=" font-size: 25px;
-                 font-weight: 700;
-                 font-family: 'Kay Pho Du', serif;
-                 font-style: italic;">{{n.op3}}</div> 
-
-             </button><button class="op">
-                <input type="radio" class="checkbox" name="{{n.id}}"  value="{{n.op4}}">
-                 <div class="num">D</div> <div style=" font-size: 25px;
-                 font-weight: 700;
-                 font-family: 'Kay Pho Du', serif;
-                 font-style: italic;">{{n.op4}}</div> 
-
-             </button>
-         </div>
-                
-            </div>
-          
-        </div>
-   
-        {% endfor %}
-        <input type="submit" class="check" value="SUBMIT">
-        
-    </form>
-   
-
-
-        
-     
+      </nav>
+    <h1 style="text-align: center; font-family: 'Kay Pho Du', serif; font-style: italic;">Aptitude Question</h1>
+    <div id="main" class="container">
+        <form action="{% url 'ans' %}" method="POST">
+            {% csrf_token %}
+            {% for n in servicedata %}
+                <div class="ele p-3 my-3 bg-light rounded">
+                    <div class="headline">
+                        <div class="num">{{ n.id }}</div>
+                        GATE CSE APTITUDE
+                    </div>
+                    <div class="que">{{ n.question }}</div>
+                    <div class="middle">
+                        <div class="op">
+                            <input type="radio" class="checkbox" name="{{ n.id }}" value="{{ n.op1 }}">
+                            <div class="num">A</div>
+                            <div>{{ n.op1 }}</div>
+                        </div>
+                        <div class="op">
+                            <input type="radio" class="checkbox" name="{{ n.id }}" value="{{ n.op2 }}">
+                            <div class="num">B</div>
+                            <div>{{ n.op2 }}</div>
+                        </div>
+                        <div class="op">
+                            <input type="radio" class="checkbox " name="{{ n.id }}" value="{{ n.op3 }}">
+                            <div class="num">C</div>
+                            <div>{{ n.op3 }}</div>
+                        </div>
+                        <div class="op">
+                            <input type="radio" class="checkbox" name="{{ n.id }}" value="{{ n.op4 }}">
+                            <div class="num">D</div>
+                            <div>{{ n.op4 }}</div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            <button type="submit" class="check btn btn-primary">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
