@@ -128,47 +128,39 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-primary">
-        <div class="container-fluid">
-        
-          {% comment %} <a class="navbar-brand" href="#">Navbar</a> {% endcomment %}
-          <div class="collapse navbar-collapse d-flex justify-content-evenly row" id="navbarTogglerDemo03">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 row d-flex justify-content-evenly row">
-                <li class="nav-item col ">
-                    {% comment %} <a class="nav-link" href="#">Link</a>
-                    
-                     {% endcomment %}
-                     <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="white" class="bi bi-list text-color" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-                      </svg>
-                  </li>
-                  <li class="nav-item col-lg-5">
-                    <div class="row ">
-                        <div class="col-sm-auto text-white  " style="font-size: 35px; font-weight:500;">EXAMSIDE
-                        </div>
-                        <div class="col text-white mt-4" style="font-weight:500;" >(Powered by ExamGoal)</div>
-                    </div>
-                    <div  class="row text-white  ms-1" style="font-size:23px;font-weight:500;" >Question</div>
-                  </li>
-              <li class="nav-item col ">
-                <a class="nav-link active text-white" aria-current="page" style="font-size: 30px; font-weight:500;" href="#">Home</a>
-              </li>
-              <li class="nav-item col ">
-                <a class="nav-link text-white" href="#" style="font-size: 30px; font-weight:500;">Profile</a>
-              </li>
-              <li class="nav-item col ">
-                <a class="nav-link text-white" style="font-size: 30px; font-weight:500;">Log-Out</a>
-              </li>
-              <img class="img-fluid col " style="height:90px;width:120px;" src="/static/book.jpg">
-            </ul>
-
-            {% comment %} <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form> {% endcomment %}
-          </div>
+    <nav>
+        <div class="d-flex bg-primary" style="height:100px;" >
+            <div class="p-1 flex-fill">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-list text-color" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+            </svg>
         </div>
-      </nav>
+        
+            <div class="p-2 flex-fill">
+                <div class="d-flex flex-column">
+                <div class="d-flex">
+                <span class="text-white flex-item col-auto g-0" style="font-size: 35px; font-weight:500;">EXAMSIDE</span>
+                        <span class="text-white flex-item pt-3 col-auto " style="font-weight:500;">(Powered by ExamGoal)</span>
+        
+            </div>
+            <div class="d-flex align-items-start">  <span class="text-white ps-4 mt-0 pt-0" style="font-size: 23px; font-weight:500; margin-top : 0px;">Question</span></div>
+        </div>
+    </div>
+        {% comment %} <div class="d-flex bg-primary" > {% endcomment %}
+            <div class="p-2 flex-fill">
+           <div class="row " style="font-size: 22px; font-weight:500;">
+            <div class="col text-white" style="font-size: 22px; font-weight:500;">Home</div>
+           <div class="col text-white" style="font-size: 22px; font-weight:500;">Profile</div>
+           <div class="col-4 text-white" style="font-size: 22px; font-weight:500;">Log-out</div>
+           <img src="/static/book.jpg" style="height:60px; width:80px;" class="col-5 text-white"></div>
+           
+        </div>
+
+            {% comment %} <div class="p-2 flex-fill">Flex item</div> {% endcomment %}
+          </div>
+    </nav>
+    
+    
     <h1 style="text-align: center; font-family: 'Kay Pho Du', serif; font-style: italic;">Aptitude Question</h1>
     <div id="main" class="container">
         <form action="{% url 'ans' %}" method="POST">
